@@ -1,0 +1,69 @@
+<!--<html>
+    <head>
+    </head>
+    <body>
+        <h1>By using your information as a input, we have figured out top 6 most relevant career domains for you.</h1>
+        <table>
+        {% for domain in recommend %}
+        <tr>
+            <th>{{ domain }}</th>
+        </tr>
+            
+        {% endfor%}
+        </table>
+        <table>
+            {% for image in photo %}
+            <tr>
+                <th>{{ image }}</th>
+            </tr>
+                
+            {% endfor%}
+        </table>
+    
+
+    </body>
+    </html>
+    -->
+    <!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Cards</title>
+  <link rel="stylesheet" href="static/card.css">
+  <link rel="shortcut icon" type="image/png" href="static/favicon.ico"/>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+
+    {% for key, value in recommend.items() %}
+
+        <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <span class="stars"></span>
+                <h2 class="Dom1">{{ key }}</h2>
+                <p class="Dom1">{{ value }}</p>
+                  {% if key == 'Software Developer (DSA-Core Domain)' %}
+                  <button onclick="window.location.href='https://www.roadmapguide.com/';">Explore
+                            </button>
+                    {% else %}
+                    <button onclick="window.location.href='static/comingsoon.jpg';">Explore
+                    </button>
+                            {% endif %}
+              </div>
+            </div>
+            <div class="face face2">
+              <h4> {{key}}</h4>
+              
+            </div>
+          </div>
+          
+        {% endfor%}
+
+</div>
+<!-- partial -->
+
+</body>
+</html>

@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from quizzory.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jan 2022 04:33:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="google-site-verification" content="w3_W4ZRm1qpnJyQhCTcry4PzeU2ELAAgTs0KRoC0sPw"/>
+    <meta name="google-site-verification" content="_uK5Tlh7U_C9Kvv7SH6h4C7Iibqr9TR9JkHrZzgB0Us"/>
+    <META NAME="Description" CONTENT="Get Survey responses as feelings from responders as humans. ">
+
+    <script data-ad-client="ca-pub-2987317143669509" async
+            src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112010057-3"></script>
+
+    <!--<script src="js/ganalytics.js"></script>-->
+
+    <script type="text/javascript" src="{{ url_for('static', filename='ganalytics.js') }}">
+    </script>
+
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&amp;display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/png" href="static/favicon.ico"/>
+
+    <!-- <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" type="text/css" href="css/material.css"> -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}" >
+    <link rel="stylesheet" href="{{ url_for('static', filename='material.css') }}" >
+    
+
+
+    <!--<script src="js/material.js"></script>-->
+
+    <script type="text/javascript" src="{{ url_for('static', filename='material.js') }}">
+    </script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>TechMap - Technical Map & Career Guidance System</title>
+
+    <!--open graph tool-->
+    <meta property="og:url" content="https://www.surveyheart.com/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="SurveyHeart"/>
+    <meta property="og:description" content="Online Survey, Questionnaire & Poll"/>
+    <meta property="og:image" content="https://surveyheart.com/images/surveyheart_icon.png"/>
+</head>
+<body>
+<!--<div class="popup-container-quizzory-message" style="display: flex" id="quizzory-server-down-message">
+    <div class="popup-wrapper-quizzory-message">
+        <img style="position: relative; float: right; width: 25px;height: 25px;"
+             onclick="hideServerDownMessage()"
+             src="images/close_black.svg"
+             alt="close"/>
+        <div>
+            <h2>Attention FormsApp and SurveyHeart Users</h2>
+
+            <p>There was an unexpected server issue yesterday that prevented Quizzes from being available.</p>
+            <p><b>We have made an emergency update to our apps to get our services online again.</b></p>
+
+            <p><b>Update the App</b> - <a href="https://play.google.com/store/apps/details?id=com.surveyheart&hl=en">
+                https://play.google.com/store/apps/details?id=com.surveyheart&hl=en</a></p>
+
+            <span>Here's how this change will affect Quizzes:</span>
+            <ol>
+                <li>The URL for new quizzes will contain <b>'quizzory.in'</b> rather than <b>'quizzory.com'</b>.</li>
+                <li>Old quizzes are still available, but 'quizzory.com' in the URL needs to be replaced with
+                    <b>'quizzory.in'</b>. You can reshare your Quiz in the apps to get the updated link.
+                </li>
+            </ol>
+
+            <p>Please note that Forms will continue to operate as they have in the past.</p>
+            <p>We sincerely apologize for this inconvenience. It was caused by our hosting company shutting down the
+                www.Quizzory.com domain without giving us any warning. We are working with them to make www.Quizzory.com
+                available again.</p>
+
+
+            <span>Sincerely,</span><br/>
+            <span><b>SurveyHeart Team</b></span>
+
+        </div>
+    </div>
+</div>-->
+<div class="page-container">
+    <div class="mobile-navigation-menu" id="mobile-navigation-menu">
+        <span style="color: #f9f9f9;" onclick="closeMobileNavigation()">Home</span>
+        <span id="about-us" onclick="scrollToAboutUs()">About Us</span>
+        <span id="policy" onclick="openPrivacyPolicy()">Privacy Policy</span>
+        <span id="tos" onclick="openTOS()">Terms of Service</span>
+        <span id="about-us" onclick="scrollToDomains()">Domains</span>
+        <span id="abuse-report"
+              onclick="openInNewTab('https://surveyheart.com/form/5f323faf7693da10a21c84c6')">Report Abuse</span>
+        <span id="contact-us"
+              onclick="#"></span>
+        <!--<button class="mdc-button sign-in-button mdc-button--outlined" onclick="../signin/signin.html">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label sign-in-button-label" style="font-size: 16px; padding: 0">Sign in</span>
+        </button>
+        <button class="mdc-button sign-up-button mdc-button--raised" onclick="../signup/signup.html">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label sign-up-button-label" style="font-size: 16px; padding: 0">Sign up</span>
+        </button>-->
+        <i onclick="closeMobileNavigation()" class="material-icons">cancel</i>
+    </div>
+    <div id="home-first-section">
+        <div class="foreground-layer">
+            <div class="top-navigator-bar">
+                <div class="title-banner">
+                    <img id="app-logo" src="static/logo.png">
+                    <div class="mobile-container">
+                        <button class="mdc-button sign-in-button-mobile mdc-button--outlined"
+                                onclick="goToWebApp(true)">
+                            <div class="mdc-button__ripple"></div>
+                            <span class="mdc-button__label sign-up-button-label" style="font-size: 14px; padding: 0">Sign in</span>
+                        </button>
+                        <i onclick="openMobileNavigation()" class="material-icons">menu</i>
+                    </div>
+                </div>
+                <div class="navigators">
+                    <span style="color: #f9f9f9;">Home</span>
+                    <span id="about-us" onclick="scrollToAboutUs()">About</span>
+                    <span id="about-us" onclick="scrollToDomains()">Domains</span>
+                    <span id="contact-us"
+                          onclick="#"></span>
+                    <div class="login-container">
+                        <!--<button class="mdc-button sign-in-button mdc-button--outlined" onclick = "openInNewTab('../signin/signin.html')">
+                            <div class="mdc-button__ripple"></div>
+                            <span class="mdc-button__label sign-in-button-label" style="font-size: 16px; padding: 0">Sign in</span>
+                        </button>
+                        <button class="mdc-button sign-up-button mdc-button--raised" onclick="openInNewTab('../signup/signup.html')">
+                            <div class="mdc-button__ripple"></div>
+                            <span class="mdc-button__label sign-up-button-label" style="font-size: 16px; padding: 0">Sign up</span>
+                        </button>
+                    -->
+                    </div>
+                </div>
+            </div>
+            <div id="text-mobile-box">
+                <div id="primary-title">
+                    <p><span>Simple & Strategic</br>Guidance</span>
+                    </p>
+                    <!--<button class="mdc-button Get-started-button mdc-button&#45;&#45;raised" onclick="goToWebApp()">
+                        <div class="mdc-button__ripple"></div>
+                        <span class="mdc-button__label Get-started-button-label">GET STARTED </span>
+                        <img style="transform: rotate(180deg); width: 24px" src="images/back_white.png">
+                    </button>-->
+                    <a href="/skillset"><img class="get-started-button" src="static/getstarted.svg">
+                    </a>
+                    <a href="/skillset">
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="home-second-section">
+        <div id="second-section-title-bar">
+            <div id="second-section-title-text">
+                <h3 id="page-title">Domains</h3>
+            </div>
+        </div>
+        <div class="form-cards-layer">
+            <div id="form-cards-container">
+              <div class="form-card"
+                   onclick="openInNewTab('https://www.roadmapguide.com/')">
+                  <img src="static/dsa.jpeg">
+                  <div class="form-contents">
+                      <h2>Data Structures and Algorithms</h2>
+                      <p>Observe the problems in-depth and you can help this world by giving the solution which no one has given before.
+                         Data structure and algorithms help in understanding the nature of the problem at a deeper level and thereby a better understanding of the world.</p>
+                      <button class="view-form"
+                              onclick="openInNewTab('https://www.roadmapguide.com/')">
+                          Explore
+                      </button>
+                  </div>
+              </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/game-developer.jpg">
+                    <div class="form-contents">
+                        <h2>Game Developer</h2>
+                        <p>Someone has to build, update, and maintain the games people play every day.
+                          Worldwide, Game Developers are in high demand, commanding impressive salaries.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/virtual-reality.jpg">
+                    <div class="form-contents">
+                        <h2>Virtual Reality</h2>
+                        <p>Companies looking to invest or test out VR software will need developers
+                          and the demand is currently exponential.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/augmented-reality.jpg">
+                    <div class="form-contents">
+                        <h2>Augmented Reality</h2>
+                        <p>An AR developer creates a layer of digital experience in our reality
+                          through the use of mobile apps, such as Pokemon Go, a game that utilizes this technology.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/computer-graphics.jpg">
+                    <div class="form-contents">
+                        <h2>Computer Graphics</h2>
+                        <p>As blogger Steve Baker wrote on the platform: "We paint pictures with math." While a bit fanciful,
+                          it does sum up the tasks graphics programmers undertake.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/robotics.jpg">
+                    <div class="form-contents">
+                        <h2>Robotics</h2>
+                        <p>Programming robots has a big future.
+                          The number of robots used in the world is increasing exponentially.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/computer-hardware.jpeg">
+                    <div class="form-contents">
+                        <h2>Computer Hardware Engineer</h2>
+                        <p>Computer hardware engineers research, design, develop,
+                          and test computer systems and components such as processors, circuit boards, memory devices, networks, and routers.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/os-developer.png">
+                    <div class="form-contents">
+                        <h2>OS Developer</h2>
+                        <p>An operating system is the most important software that runs on a computer.
+                          It manages the computer's memory and processes, as well as all of its software and hardware.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/devops.png">
+                    <div class="form-contents">
+                        <h2>DevOps</h2>
+                        <p>A DevOps engineer is an IT professional who works with software developers,
+                          system operators (SysOps) and other production IT staff to oversee code releases and deployments.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/ai.jpg">
+                    <div class="form-contents">
+                        <h2>Artificial Intelligence</h2>
+                        <p> AI technology is important because it enables human capabilities – understanding, reasoning, planning,
+                          communication and perception – to be undertaken by software increasingly effectively, efficiently and at low cost.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/data-analyst.jpg">
+                    <div class="form-contents">
+                        <h2>Data Analyst</h2>
+                        <p>The data analyst serves as a gatekeeper for an organization’s data so
+                          stakeholders can understand data and use it to make strategic business decisions.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/data-scientist.jpg">
+                    <div class="form-contents">
+                        <h2>Data Scientist</h2>
+                        <p>Data science is a rare job where you get to do all of the cool stuff together: mathematics, coding, and research.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/cloud-computing.jpg">
+                    <div class="form-contents">
+                        <h2>Cloud Computing</h2>
+                        <p>The cloud computing industry is booming as more and more organizations
+                          begin to realize the benefits of leveraging cloud services in their daily operations.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/cyber-security.jpg">
+                    <div class="form-contents">
+                        <h2>Cyber Security</h2>
+                        <p>As today’s world becomes increasingly more dependent on the Internet and mobile computing to accomplish
+                          so many of our everyday tasks, the issue of security becomes more urgent. As a result, this boosts the demand for more Cyber Security engineers.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/ui-uxdesign.jpeg">
+                    <div class="form-contents">
+                        <h2>UI/UX Design</h2>
+                        <p>A UX designer thinks about how the experience makes the user feel,
+                          and how easy it is for the user to accomplish their desired tasks.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/iot.jpg">
+                    <div class="form-contents">
+                        <h2>IOT</h2>
+                        <p>The Internet of Things (IoT) refers to physical objects – vehicles, household appliances, wearables, and much more –
+                          that are connected to the Internet and can therefore transfer data online using embedded sensors.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/seo.png">
+                    <div class="form-contents">
+                        <h2>SEO Specialist</h2>
+                        <p>By conducting keyword research and leveraging SEO tools, such as Google Analytics, an SEO Specialist can
+                          increase the visibility of a website on Google, which in turn has major benefits for any company.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/statistician.jpg">
+                    <div class="form-contents">
+                        <h2>Statistician</h2>
+                        <p>Evaluating the statistical methods and procedures used to obtain data in order to ensure validity,
+                           applicability, efficiency, and accuracy of analysis</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/big-data.jpg">
+                    <div class="form-contents">
+                        <h2>Big Data Engineer</h2>
+                        <p>A big data engineer is an information technology (IT) professional who is responsible for designing, building,
+                          testing and maintaining complex data processing systems that work with large data sets.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/dba.jpg">
+                    <div class="form-contents">
+                        <h2>Database Administrator</h2>
+                        <p>A DBA designs, implements, administers,
+                          and monitors data management systems and ensures design, consistency, quality, and security.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/blockchain.jpg">
+                    <div class="form-contents">
+                        <h2>Blockchain Developer</h2>
+                        <p>Blockchain is the next greatest technological revolution. It has opened up a new field of development known as blockchain development.
+                           It is poised to revolutionise how we handle data and perform our business activities.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/front-end.png">
+                    <div class="form-contents">
+                        <h2>Front-End Developer</h2>
+                        <p>Front-End developers have a huge responsibility in the coming years when it comes to mobile first approach and usability.
+                          Therfore, the front-end developers should be capable of developing application and make that dynamic.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/backend.png">
+                    <div class="form-contents">
+                        <h2>Back-End Developer</h2>
+                        <p>Back-end developers create, code, and improve the server, server-side applications, and databases that, when combined with front-end codes,
+                           help create a functional, seamless experience for the end-user. </p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/full-stack.png">
+                    <div class="form-contents">
+                        <h2>Full Stack Developer</h2>
+                        <p>The U.S. Bureau of Labor Statistics has already reported that Full Stack Development jobs will increase from 135,000 to over 853,000 by 2024.
+                          Besides being available in large numbers, full-stack development jobs are also high salaried jobs.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/computer-networking.jpg">
+                    <div class="form-contents">
+                        <h2>Computer Networking</h2>
+                        <p>The field comprises the construction, design, and use of the network and the maintenance, management, and operation of the network infrastructure, software, and policies.
+                          It is considered a crucial part of any business as it includes both hardware and software networking.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/mobile-application.jpg">
+                    <div class="form-contents">
+                        <h2>Mobile Application Developer</h2>
+                        <p>Mobile phones and devices have become such a ubiquitous part of our everyday lives that it’s difficult to imagine going through an entire day without one.
+                          This shift to ubiquity has been driven largely in part by the increasing scope of mobile application development.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/compiler-developer.jpg">
+                    <div class="form-contents">
+                        <h2>Compiler Developer</h2>
+                        <p>Compiler design principles provide an in-depth view of translation and optimization process.
+                          Compiler design covers basic translation mechanism and error detection & recovery.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+                <div class="form-card"
+                     onclick="openInNewTab('static/comingsoon.jpg')">
+                    <img src="static/qa.png">
+                    <div class="form-contents">
+                        <h2>QA/Test Developer</h2>
+                        <p>QA is a specialist whose activities are aimed to improve the
+                          software development process by detecting errors in a product and preventing defects from occurring again.</p>
+                        <button class="view-form"
+                                onclick="openInNewTab('static/comingsoon.jpg')">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="about-us-page">
+        <div id="full-card">
+            <h3>Our Aim</h3>
+            <div class="about-us-stats-container"></div>
+            <div class="content-about-us">
+                <p>"Our Main Aim Is To Provide Technical Guidance To Every Individual With No or Less Knowledge About The Skills
+                  and Technologies That They Must Learn To Achieve Their Goal. Currently Focussing on Engineering Students For Computer
+                  Science Branch."</p>
+            </div>
+
+            <div id="statistics" style="display: none">
+                <div class="no-of-users">
+                    <p>Users</p>
+                    <label class="count">1.7 Million</label>
+                </div>
+                <div class="no-of-users">
+                    <p>Creators</p>
+                    <label class="count">200K</label>
+                </div>
+            </div>
+            <div class="user-country" style="display: none">
+                <h2>Countries</h2>
+                <div id="country-list">
+                    <div class="column-1">
+                        <p>India</p>
+                        <p>Indonesia</p>
+                        <p>Nigeria</p>
+                    </div>
+                    <div class="column-2">
+                        <p>USA</p>
+                        <p>Brazil</p>
+                        <p>Malaysia</p>
+                    </div>
+                    <div class="column-3">
+                        <p>Mexico</p>
+                        <p>Philippines</p>
+                        <p>Egypt</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dev-info-page" id="our-team">
+            <h1 style="width: 100%; height: 10%; text-align: center;">Our Team</h1>
+            <div class="profile-container">
+                <div class="individual-profile">
+                    <img class="image-holder" src="static/ritik_profile.jpeg">
+                    <h4 style="margin: 20px 0 0">Ritik Sharma</h4>
+                    <span>Data Science & Backend</span>
+                </div>
+                <div class="individual-profile">
+                    <img class="image-holder" src="static/shruti_profile.jpg">
+                    <h4 style="margin: 20px 0 0">Shruti Sharma</h4>
+                    <span>Data Science & Content Researcher</span>
+                </div>
+
+                <div class="individual-profile">
+                    <img class="image-holder" src="static/satyam_profile.jpeg">
+                    <h4 style="margin: 20px 0 0"> Satyam Jha</h4>
+                    <span>Content Researcher</span>
+                </div>
+            </div>
+                <div class="individual-profile">
+                    <img class="image-holder" src="static/nishant_profile.jpeg">
+                    <h4 style="margin: 20px 0 0">Nishant Tiwari</h4>
+                    <span>Front-End Developer</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Site footer -->
+<footer class="footer-distributed">
+
+    <div class="footer-left">
+        <img id="app-logo" src="static/logo.png">
+
+        </a>
+    </div>
+
+    <div class="footer-center">
+
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>Krishna Engineering College,</span>
+                <span>95, Loni Road,</span>
+                <span> Between Mohannagar &, Hindon Air Force Station,</span>
+                <span>Ghaziabad, Uttar Pradesh</span>
+                <span>India - 201007.</span></p>
+        </div>
+
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:techmap28@gmail.com">support@tcgs.com</a></p>
+        </div>
+
+    </div>
+
+    <div class="footer-right">
+
+        <p class="footer-company-about">
+            <span>About Us</span>
+            The Project TECHNICAL MAP is all about providing the technical guidance to the individuals who are not able to figure out the right career path for themselves and for those who are aware but don’t know how to make a career transition with required set of skills.
+        </p>
+
+    </div>
+
+</footer>
+
+</div>
+<script>
+
+    function scrollToAboutUs() {
+        window.location.hash = "#";
+        window.location.hash = "#about-us-page";
+        closeMobileNavigation();
+    }
+    function scrollToDomains() {
+        window.location.hash = "#";
+        window.location.hash = "#home-second-section";
+        closeMobileNavigation();
+    }
+
+
+    function gotoPlaystore() {
+        window.location = "https://play.google.com/store/apps/details?id=com.surveyheart";
+    }
+
+    const DEV_SITE = "https://heartfullapps.com/app";
+    const PROD_SITE = "https://surveyheart.com/app";
+
+    function goToWebApp(isSignIn) {
+        let redirectableHost;
+        if ((location.hostname === 'quizapp-dev.southindia.cloudapp.azure.com')
+            || (location.hostname === 'localhost')) {
+            redirectableHost = DEV_SITE;
+        } else {
+            redirectableHost = PROD_SITE;
+        }
+        if (isSignIn === false) {
+            window.location = redirectableHost + "?u=1";
+        } else if (isSignIn === undefined) {
+            window.location = redirectableHost;
+        } else {
+            window.location = redirectableHost + "?u=0"
+        }
+    }
+
+    /*   function goToWebApp(isSignIn) {
+           if (isSignIn === false) {
+               window.location = "/app?u=1";
+           } else if (isSignIn === undefined) {
+               window.location = "/app";
+           } else {
+               window.location = "/app?u=0";
+           }
+       }*/
+
+
+    function openPrivacyPolicy() {
+        analytics('send', {
+            hitType: 'event',
+            eventCategory: 'Home',
+            eventAction: 'View',
+            eventLabel: 'privacy_policy'
+        });
+        let privacyWindow = window.open('privacypolicy.html', '_blank');
+        privacyWindow.focus();
+    }
+
+    function openTOS() {
+        analytics('send', {
+            hitType: 'event',
+            eventCategory: 'Home',
+            eventAction: 'View',
+            eventLabel: 'terms_of_service'
+        });
+        let termsWindow = window.open('terms.html', '_blank');
+        termsWindow.focus();
+    }
+
+    function openInNewTab(url) {
+        var openWindow = window.open(url, '_blank');
+        openWindow.focus();
+    }
+
+    function openMobileNavigation() {
+        document.getElementById("mobile-navigation-menu").style.display = "flex";
+    }
+
+    function closeMobileNavigation() {
+        document.getElementById("mobile-navigation-menu").style.display = "none";
+    }
+
+    function hideServerDownMessage() {
+        document.getElementById("quizzory-server-down-message").style.display = "none";
+    }
+
+</script>
+
+
+<script>
+    mdc.autoInit();
+    mdc.ripple.MDCRipple.attachTo(document.querySelector('.sign-in-button'));
+    mdc.ripple.MDCRipple.attachTo(document.querySelector('.sign-up-button'));
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '../www.google-analytics.com/analytics.js', 'analytics');
+    analytics('create', 'UA-112010057-3', 'auto');
+
+</script>
+</body>
+
+<!-- Mirrored from .com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jan 2022 04:33:47 GMT -->
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Skillset</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<!--<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">-->
+
+		<link rel="stylesheet" href="{{ url_for('static', filename='material-design-iconic-font.min.css') }}" >
+
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="static/skillset.css">
+		<link rel="shortcut icon" type="image/png" href="static/favicon.ico"/>
+
+	
+
+	</head>
+
+	<!--background="{{'/static/bg-registration-form-7.jpg'}}"-->
+
+	<body background="{{'/static/bg-registration-form-7.jpg'}}" style="background-size: cover;">
+		<div class="wrapper">
+			<div class="inner">
+				<form action="/result", method='post'>
+					<h3>Career Guidance</h3>
+					<p>To get the accurate results, please enter your technical details and make them seperated with comma-space [Ex- C, C++, Java]</p>
+					<label class="form-group">
+						<input type="text" class="form-control" id='skills' name='skills' required>
+						<span>Tell us about your Technical Skills</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="text" class="form-control" id='domain_knowledge' name='domain_knowledge' required>
+						<span for="">Tell us something about your Domain konwledge in computer science.</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group" >
+						<input type="text" class="form-control" id='interest' name='interest' required>
+						<span for="">Do you have interest in any particular computer science domain(s).?</span>
+						<span class="border"></span>
+					</label>
+					<button href=>Submit
+						<!--<i class="zmdi-arrow-forward"></i>-->
+					</button>
+				</form>
+			</div>
+		</div>
+
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
