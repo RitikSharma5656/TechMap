@@ -1,0 +1,26 @@
+const QUESTION_TYPE = {
+    SHORT_TEXT: "SHORT_TEXT",
+    LONG_TEXT: "LONG_TEXT",
+    EMAIL: "EMAIL",
+    NUMBER: "NUMBER",
+    WEB_LINK: "WEB_LINK",
+    MULTIPLE_CHOICE: "MULTIPLE_CHOICE",
+    PICTURE_CHOICE: "PICTURE_CHOICE",
+    CHECKBOX_CHOICE: "CHECKBOX_CHOICE",
+    DROPDOWN_CHOICE: "DROPDOWN_CHOICE",
+    YES_NO_CHOICE: "YES_NO_CHOICE",
+    LINEAR_SCALE: "LINEAR_SCALE",
+    RATING_SCALE: "RATING_SCALE",
+    STAR_RATING_SCALE: "STAR_RATING_SCALE",
+    DATE: "DATE",
+    TIME: "TIME",
+    FILE_UPLOAD: "FILE_UPLOAD"
+};
+
+const QUESTION_SECTION = "SECTION";
+
+let starRatingColors = ["#e53935", "#ef9a9a", "#757575", "#81c784", "#2e7d32"];
+
+function getSlogan() {
+    return new URL(window.location.href).pathname.split('/')[2];
+}
